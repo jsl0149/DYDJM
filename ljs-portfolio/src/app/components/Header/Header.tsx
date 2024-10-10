@@ -7,7 +7,7 @@ const Header = () => {
           <span className="bg-yellow-300 text-black rounded-md font-bold">
             JS
           </span>
-          &nbsp;'s Portfolio
+          &nbsp;{`'s Portfolio`}
         </span>
         <div className="relative flex text-white flex-row w-fit gap-4 justify-between text-[1.4rem] animate-fade_in_slow">
           <span>About</span>

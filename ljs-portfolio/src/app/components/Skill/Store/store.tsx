@@ -8,8 +8,8 @@ interface AboutMeVisibleState {
 
 const useStore = create<AboutMeVisibleState>((set) => ({
   isVisible: false,
-  setVisible: () => set((state) => ({ isVisible: true })),
-  setHidden: () => set((state) => ({ isVisible: false })),
+  setVisible: () => set(() => ({ isVisible: true })),
+  setHidden: () => set(() => ({ isVisible: false })),
 }));
 
 export default useStore;

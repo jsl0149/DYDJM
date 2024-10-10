@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import clip from '@/app/images/clip.svg';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import photo from '@/app/images/photo.jpg';
 import { TagCloud } from 'react-tagcloud';
 import useStore from './Store/store';
@@ -25,7 +24,7 @@ const data = [
 ];
 
 const AboutMe = () => {
-  const { isVisible, setVisible, setHidden } = useStore();
+  const { isVisible, setVisible } = useStore();
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -77,7 +76,7 @@ const AboutMe = () => {
               </span>
             </div>
             <Image src={photo.src} alt="photo" width={213} height={263}></Image>
-            <span>1998.08.22</span>
+            <span>Birth. 1998.08.22</span>
             <span>Phone. 010-3367-9406</span>
             <span>Email. coooding.la@gmail.com</span>
             <span className="w-fit">Education. Inha University CSE</span>
@@ -92,7 +91,7 @@ const AboutMe = () => {
 };
 
 const TTT = () => {
-  const { isVisible, setVisible, setHidden } = useStore();
+  const { isVisible } = useStore();
 
   return (
     <div className="animate-fade_in_slow">
@@ -115,23 +114,23 @@ const TTT = () => {
   );
 };
 
-const AboutMeField = ({
-  category,
-  value,
-}: {
-  category: string;
-  value: string;
-}) => {
-  return (
-    <div className="relative flex flex-row justify-center w-[224px] ">
-      <div className="relaive flex flex-col items-center gap-3">
-        <span className="text-[1.4rem]  font-bold text-gray-500">
-          {category}
-        </span>
-        <span className="text-[1.2rem]">{value}</span>
-      </div>
-    </div>
-  );
-};
+// const AboutMeField = ({
+//   category,
+//   value,
+// }: {
+//   category: string;
+//   value: string;
+// }) => {
+//   return (
+//     <div className="relative flex flex-row justify-center w-[224px] ">
+//       <div className="relaive flex flex-col items-center gap-3">
+//         <span className="text-[1.4rem]  font-bold text-gray-500">
+//           {category}
+//         </span>
+//         <span className="text-[1.2rem]">{value}</span>
+//       </div>
+//     </div>
+//   );
+// };
 
 export default AboutMe;

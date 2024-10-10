@@ -10,8 +10,6 @@ export default function Home() {
       <Main></Main>
       <AboutMe></AboutMe>
       <Skill></Skill>
-      <AboutMe></AboutMe>
-      <AboutMe></AboutMe>
     </>
   );
 }

@@ -17,7 +17,7 @@ const data = [
   { value: '눈치빠름', count: 25 },
   { value: '소통', count: 30 },
   { value: '열정', count: 38 },
-  { value: '친화력', count: 15 },
+  { value: '공감', count: 15 },
   { value: '흡수력', count: 20 },
   { value: '팔로워십', count: 20 },
   { value: '긍정적', count: 38 },
@@ -67,21 +67,29 @@ const AboutMe = () => {
             }`}
           ></div>
         </div>
-        <div className="relative w-full h-fit flex flex-row gap-[2rem]">
-          <div className="relative w-fit h-fit flex flex-col text-[1rem] flex-shrink-0">
+        <div className="relative w-fit h-fit flex flex-row gap-[2rem]">
+          <div className="relative w-fit h-fit flex flex-col text-[1rem] flex-shrink-0 gap-1">
             <div className="relative w-fit flex flex-row items-end">
               <span className="text-[2rem] ">
                 이진선 &nbsp;
                 <span className="text-[1.2rem]">Lee Jin Seon</span>
               </span>
             </div>
-            <Image src={photo.src} alt="photo" width={213} height={263}></Image>
-            <span>Birth. 1998.08.22</span>
-            <span>Phone. 010-3367-9406</span>
-            <span>Email. coooding.la@gmail.com</span>
-            <span className="w-fit">Education. Inha University CSE</span>
+            <Image
+              src={photo.src}
+              alt="photo"
+              width={230}
+              height={200}
+              quality={100}
+            ></Image>
+            <div>
+              <p>Birth. 1998.08.22</p>
+              <p>Phone. 010-3367-9406</p>
+              <p>Email. coooding.la@gmail.com</p>
+              <p className="w-fit">Education. Inha University CSE</p>
+            </div>
           </div>
-          <div className="relaive w-full ">
+          <div className="relative w-full ">
             <TTT></TTT>
           </div>
         </div>
@@ -94,23 +102,23 @@ const TTT = () => {
   const { isVisible } = useStore();
 
   return (
-    <div className="animate-fade_in_slow">
-      <TagCloud
-        minSize={35}
-        maxSize={80}
-        tags={data}
-        disableRandomColor={true}
-        randomSeed={13}
-        onClick={(tag) => alert(`'${tag.value}' was selected!`)}
-      />
-      <div className="relative w-full h-fit top-[57px]">
-        <div
-          className={`absolute bg-white h-[0.5px] w-0 left-0 ${
-            isVisible && 'animate-liner'
-          }`}
-        ></div>
+    <>
+      <div className="relative w-full animate-fade_in_slow top-[1.5rem]">
+        <TagCloud
+          minSize={35}
+          maxSize={75}
+          tags={data}
+          disableRandomColor={true}
+          randomSeed={13}
+          onClick={(tag) => alert(`'${tag.value}' was selected!`)}
+        />
       </div>
-    </div>
+      <div
+        className={`absolute bg-white h-[0.5px] w-0 left-0 bottom-[7px] ${
+          isVisible && 'animate-liner'
+        }`}
+      ></div>
+    </>
   );
 };
 

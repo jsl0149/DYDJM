@@ -2,7 +2,7 @@
 
 import useStore from '../AboutMe/Store/store';
 import Image from 'next/image';
-import STACK_ICON from './Images/image';
+import { STACK_ICON, STACK_BACK, STACK_DEV, STACK_FRONT } from './Images/image';
 
 const Skill = () => {
   const { isVisible } = useStore();
@@ -39,7 +39,7 @@ const Skill = () => {
 const Stacks = () => {
   return (
     <div className="relative w-full flex flex-col gap-2">
-      <span className="relative text-[1rem]">{'stacks'}</span>
+      <span className="relative text-[1rem]">{'Stacks'}</span>
       <div className="relaive flex flex-row gap-3">
         {STACK_ICON.map(([name, src]) => {
           return (
@@ -59,100 +59,46 @@ const Stacks = () => {
 
 const Detail = () => {
   return (
-    <>
-      <div className="relative flex flex-row w-full gap">
-        <div className="flex flex-col">
-          <StackItem
-            src={STACK_ICON[0][1]}
-            name={STACK_ICON[0][0]}
-            content="서버 컴포넌트를 이용한 SSR 적용 경험이 있어요, app rou."
-          ></StackItem>
-          <StackItem
-            src={STACK_ICON[0][1]}
-            name={STACK_ICON[0][0]}
-            content="서버 컴포넌트를 이용한 SSR 적용 uter에 익숙해요."
-          ></StackItem>
-          <StackItem
-            src={STACK_ICON[0][1]}
-            name={STACK_ICON[0][0]}
-            content="서버 컴포넌트를 이용한 SSR 적용 경험이 있어요, app router에 익숙해요."
-          ></StackItem>
-        </div>
-        <div className="flex flex-col">
-          <StackItem
-            src={STACK_ICON[0][1]}
-            name={STACK_ICON[0][0]}
-            content="filter, map등의 고차 함수를 활용한 API Data 가공과 async, await 사용에 익숙해요."
-          ></StackItem>
-          <StackItem
-            src={STACK_ICON[0][1]}
-            name={STACK_ICON[0][0]}
-            content="서버 컴포넌트를 이용한 있어요, app router에 익숙해요."
-          ></StackItem>
-          <StackItem
-            src={STACK_ICON[0][1]}
-            name={STACK_ICON[0][0]}
-            content="서버 컴포넌트를 이용한 SSR 적용 경험er에 익숙해요."
-          ></StackItem>
-        </div>
+    <div className="flex flex-col gap-[2rem] w-full">
+      <div className="flex flex-col gap-3 w-full">
+        <div className="text-[1rem]">Front-end</div>
+        {STACK_FRONT.map((item) => {
+          return <StackItem stackItem={item} key={item.name}></StackItem>;
+        })}
       </div>
-      <div className="relative flex flex-row w-full ">
-        <div className="flex flex-col">
-          <StackItem
-            src={STACK_ICON[0][1]}
-            name={STACK_ICON[0][0]}
-            content="서버 컴포넌트를 이용있어요, app rou."
-          ></StackItem>
-          <StackItem
-            src={STACK_ICON[0][1]}
-            name={STACK_ICON[0][0]}
-            content="서버 컴포넌트를 이진선입니다ter에 익숙해요."
-          ></StackItem>
-          <StackItem
-            src={STACK_ICON[0][1]}
-            name={STACK_ICON[0][0]}
-            content="서버 컴포넌트를 이용한요, app router에 익숙해요."
-          ></StackItem>
-        </div>
-        <div className="flex flex-col">
-          <StackItem
-            src={STACK_ICON[0][1]}
-            name={STACK_ICON[0][0]}
-            content="서버 컴포넌트를 이용한 SSR 적용 router에 익숙해요."
-          ></StackItem>
-          <StackItem
-            src={STACK_ICON[0][1]}
-            name={STACK_ICON[0][0]}
-            content="서버 컴포넌트를 이용한 있어요, app router에 익숙해요."
-          ></StackItem>
-          <StackItem
-            src={STACK_ICON[0][1]}
-            name={STACK_ICON[0][0]}
-            content="서버 컴포넌트를 이용한 SSR 적용 경험er에 익숙해요."
-          ></StackItem>
-        </div>
+      <div className="flex flex-col gap-3 w-full">
+        <div className="text-[1rem]">Back-end</div>
+        {STACK_BACK.map((item) => {
+          return <StackItem stackItem={item} key={item.name}></StackItem>;
+        })}
       </div>
-    </>
+      <div className="flex flex-col gap-3 w-full">
+        <div className="text-[1rem]">DevOps</div>
+        {STACK_DEV.map((item) => {
+          return <StackItem stackItem={item} key={item.name}></StackItem>;
+        })}
+      </div>
+    </div>
   );
 };
 
-interface StackItemInterface {
+type StackItemType = {
   name?: string;
   content?: string;
   src: string;
-}
+};
 
-const StackItem: React.FC<StackItemInterface> = ({
-  name,
-  content,
-  src,
+const StackItem = ({
+  stackItem,
+}: {
+  stackItem: StackItemType;
 }): JSX.Element => {
   return (
-    <div className="relative flex flex-row gap-3 items-center w-[550px]">
-      <Image src={src} alt="name" width={40} height={40}></Image>
-      <div className="relative flex flex-col w-fit h-fit gap-1">
-        <span className="text-[#808080] text-[0.9rem]">{name}</span>
-        <span className="text-[0.9rem]">{content}</span>
+    <div className="relative flex flex-row gap-3 items-center w-fit">
+      <Image src={stackItem.src} alt="name" width={50} height={50}></Image>
+      <div className="relative flex flex-col w-fit h-fit gap-[0.5px]">
+        <span className="text-[#808080] text-[1rem]">{stackItem.name}</span>
+        <span className="text-[1rem]">{stackItem.content}</span>
       </div>
     </div>
   );

@@ -56,7 +56,7 @@ const Project = () => {
 
 const Item = () => {
   return (
-    <div className="absolute flex flex-row top-[-48px] left-[300px] gap-7">
+    <div className="absolute flex flex-row top-[-48px] left-[300px] gap-8">
       <ItemUp year={'2020'} content={'지뢰찾기'} time={1000}></ItemUp>
       <ItemDown
         year={'2021'}
@@ -81,19 +81,21 @@ const ItemUp = ({
   content: string;
   time: number;
 }) => {
-  const [isVisible, setIsvisible] = useState(false);
+  const [isVisibleDetail, setIsvisibleDetail] = useState(false);
+  const { isVisible, setVisible } = useStore();
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsvisible(true);
-    }, time);
-  }, []);
+    if (isVisible)
+      setTimeout(() => {
+        setIsvisibleDetail(true);
+      }, time);
+  }, [isVisible]);
 
   return (
     <div className="relative bottom-2 flex flex-col items-center gap-2">
       <span
         className={`text-white text-[1rem] ${
-          isVisible ? 'opacity-100 animate-fade_in_fast' : 'opacity-0'
+          isVisibleDetail ? 'opacity-100 animate-fade_in_fast' : 'opacity-0'
         }`}
       >
         {content}
@@ -102,7 +104,7 @@ const ItemUp = ({
         <div className="relaive w-[0.5px] h-5">
           <div
             className={`absolute w-[0.5px] bottom-1  bg-white ${
-              isVisible ? 'opacity-100 animate-rise' : 'opacity-0'
+              isVisibleDetail ? 'opacity-100 animate-rise' : 'opacity-0'
             } `}
           ></div>
         </div>
@@ -123,13 +125,15 @@ const ItemDown = ({
   content: string;
   time: number;
 }) => {
-  const [isVisible, setIsvisible] = useState(false);
+  const [isVisibleDetail, setIsVisibleDetail] = useState(false);
+  const { isVisible, setVisible } = useStore();
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsvisible(true);
-    }, time);
-  }, []);
+    if (isVisible)
+      setTimeout(() => {
+        setIsVisibleDetail(true);
+      }, time);
+  }, [isVisible]);
 
   return (
     <div className="relative top-[10px]  flex flex-col items-center gap-2">
@@ -139,14 +143,14 @@ const ItemDown = ({
         <div className="relaive w-[0.5px] h-10">
           <div
             className={`absolute w-[0.5px] top-0  bg-white ${
-              isVisible ? 'animate-rise opacity-100' : 'opacity-0'
+              isVisibleDetail ? 'animate-rise opacity-100' : 'opacity-0'
             }`}
           ></div>
         </div>
       </div>
       <span
         className={`text-white text-[1rem] ${
-          isVisible ? 'opacity-100 animate-fade_in_fast' : 'opacity-0'
+          isVisibleDetail ? 'opacity-100 animate-fade_in_fast' : 'opacity-0'
         }`}
       >
         {content}

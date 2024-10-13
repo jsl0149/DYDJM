@@ -14,6 +14,7 @@ const config: Config = {
       Tenada: ['Tenada'],
       HSSaemaul: ['HSSaemaul-Regular'],
       GangwonEduPowerExtraBoldA: ['GangwonEduPowerExtraBoldA'],
+      SUIT: ['SUIT-Regular'],
     },
 
     extend: {

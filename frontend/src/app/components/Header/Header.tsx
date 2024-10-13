@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <>
-      <div className="absolute h-14 w-full flex flex-row justify-between align-middle top-5 left-0 items-center px-[20rem] z-10">
+      {/* <div className="absolute h-14 w-full flex flex-row justify-between align-middle top-5 left-0 items-center px-[20rem] z-10">
         <span className="relative text-[2rem] text-white animate-fade_in_slow">
           L
           <span className="bg-yellow-300 text-black rounded-md font-bold">
@@ -14,7 +14,7 @@ const Header = () => {
           <span>Skills</span>
           <span>Projects</span>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

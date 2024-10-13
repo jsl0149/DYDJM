@@ -59,6 +59,14 @@ const config: Config = {
           '0%': { width: '0%' },
           '100%': { width: '100%' },
         },
+        rise: {
+          '0%': {
+            height: '0%',
+          },
+          '100%': {
+            height: '100%',
+          },
+        },
       },
       animation: {
         infiniteSlide: 'infiniteSlide 3s ease-in-out infinite',
@@ -67,6 +75,7 @@ const config: Config = {
         fade_in_slow: 'fade_in 2s ease-in-out',
         expand: 'expand 0.5s ease-in-out forwards',
         liner: 'liner 1s forwards',
+        rise: 'rise 1s forwards',
       },
     },
   },

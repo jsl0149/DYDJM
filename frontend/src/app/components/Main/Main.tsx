@@ -10,7 +10,7 @@ const Main = () => {
       <div className="fixed bg-[#1B1B1E] w-full h-[100dvh] flex flex-col justify-center items-center"></div>
       <div className='className="relative  w-full h-[100dvh] flex flex-col justify-center items-center"'>
         <div className="relative w-full h-fit text-[3rem] text-white font-Tenada flex flex-col  items-center font-thin animate-fade_in_fast ">
-          <h2>{`"이거 될 때 까지 안 잔다"`}</h2>
+          <h2>{`"스스로 생각하고 고민하는"`}</h2>
           <h2>안녕하세요, 될 때 까지 하는 이진선입니다.</h2>
         </div>
         <div

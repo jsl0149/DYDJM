@@ -31,7 +31,7 @@ const ItemUp = ({
   time: number;
 }) => {
   const [isVisibleDetail, setIsvisibleDetail] = useState(false);
-  const { isVisible, setVisible } = useStore();
+  const { isVisible } = useStore();
 
   useEffect(() => {
     if (isVisible)
@@ -75,7 +75,7 @@ const ItemDown = ({
   time: number;
 }) => {
   const [isVisibleDetail, setIsVisibleDetail] = useState(false);
-  const { isVisible, setVisible } = useStore();
+  const { isVisible } = useStore();
 
   useEffect(() => {
     if (isVisible)

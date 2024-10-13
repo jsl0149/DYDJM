@@ -10,7 +10,7 @@ const Main = () => {
       <div className="fixed bg-[#1B1B1E] w-full h-[100dvh] flex flex-col justify-center items-center"></div>
       <div className='className="relative  w-full h-[100dvh] flex flex-col justify-center items-center"'>
         <div className="relative w-full h-fit text-[3rem] text-white font-SUIT flex flex-col  items-center font-thin animate-fade_in_fast ">
-          <h2>"주체적인 사고, 개발은 예술이다."</h2>
+          <h2>{`"주체적인 사고, 개발은 예술이다."`}</h2>
           <h2>안녕하세요, 신입 프론트엔드 이진선입니다.</h2>
         </div>
         <div

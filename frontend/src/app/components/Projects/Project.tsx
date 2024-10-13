@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import useStore from './Store/store';
 import HistoryLine from './components/HistoryLine/HistoryLine';
 import Card from './components/Card/Card';
@@ -54,7 +54,7 @@ const Project = () => {
         </div>
         <div className="relative flex flex-row flex-wrap justify-between w-full h-fit px-[3rem] top-[150px] gap-[50px] pb-[5rem]">
           {PROJECT_INFO.map((item) => {
-            return <Card info={item}></Card>;
+            return <Card info={item} key={item.title}></Card>;
           })}
         </div>
       </div>

@@ -1,7 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-
 type ProjectCardType = {
   title: string;
   summary: string;
@@ -37,8 +35,8 @@ const Card: React.FC<CardProps> = ({ info }) => {
       </div>
       <h3 className="text-[1.3rem]">{info?.headLine}</h3>
       <ul className="relative text-[1rem] list-disc list-inside left-[1rem] w-fit">
-        {info?.list.map((item) => {
-          return <li>{item}</li>;
+        {info?.list.map((item, idx) => {
+          return <li key={idx}>{item}</li>;
         })}
       </ul>
     </div>

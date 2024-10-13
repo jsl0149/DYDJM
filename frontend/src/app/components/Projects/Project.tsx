@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import useStore from './Store/store';
 import HistoryLine from './components/HistoryLine/HistoryLine';
+import Card from './components/Card/Card';
 
 const Project = () => {
   const { isVisible, setVisible } = useStore();
@@ -49,6 +50,9 @@ const Project = () => {
               isVisible && 'animate-liner'
             }`}
           ></div>
+        </div>
+        <div className="relative flex flex-row flex-wrap justify-between w-full h-fit px-[5rem] top-[100px] gap-[50px] pb-[5rem]">
+          <Card></Card> <Card></Card> <Card></Card> <Card></Card>
         </div>
       </div>
     </section>

@@ -15,6 +15,7 @@ const config: Config = {
       HSSaemaul: ['HSSaemaul-Regular'],
       GangwonEduPowerExtraBoldA: ['GangwonEduPowerExtraBoldA'],
       SUIT: ['SUIT-Regular'],
+      poppins: ['Poppins', 'sans-serif'],
     },
 
     extend: {

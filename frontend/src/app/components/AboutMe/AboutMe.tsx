@@ -46,7 +46,7 @@ const AboutMe = () => {
 
   return (
     <section
-      className="relative w-full h-fit bg-[#1b1b1e] flex flex-row justify-center py-[4rem] "
+      className="relative w-full h-[100dvh] bg-[#1b1b1e] flex flex-row justify-center py-[4rem] items-center"
       id="AboutMe"
     >
       <div

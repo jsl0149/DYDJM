@@ -3,6 +3,9 @@
 import useStore from '../AboutMe/Store/store';
 import Image from 'next/image';
 import { STACK_ICON, STACK_BACK, STACK_DEV, STACK_FRONT } from './Images/image';
+import frontend from '../../images/front.svg';
+import backend from '../../images/backend.svg';
+import devops from '../../images/devops.svg';
 
 const Skill = () => {
   const { isVisible } = useStore();
@@ -18,9 +21,7 @@ const Skill = () => {
         }`}
       >
         <div className="relative w-full flex flex-row top-[10px]">
-          <h3 className="text-[2rem] font-GangwonEduPowerExtraBoldA text-center">
-            Skills
-          </h3>
+          <h3 className="text-[2rem] font-poppins text-center">Skills</h3>
         </div>
         <div className="relative w-full h-fit ">
           <div
@@ -29,51 +30,62 @@ const Skill = () => {
             }`}
           ></div>
         </div>
-        <Stacks></Stacks>
+
         <Detail></Detail>
       </div>
     </section>
   );
 };
 
-const Stacks = () => {
-  return (
-    <div className="relative w-full flex flex-col gap-2">
-      <span className="relative text-[1rem]">{'Stacks'}</span>
-      <div className="relaive flex flex-row gap-3">
-        {STACK_ICON.map(([name, src]) => {
-          return (
-            <Image
-              src={src}
-              alt={name}
-              width={50}
-              height={50}
-              key={name}
-            ></Image>
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
 const Detail = () => {
   return (
-    <div className="flex flex-col gap-[2rem] w-full">
+    <div className="flex flex-col gap-[4rem] w-full">
       <div className="flex flex-col gap-3 w-full">
-        <div className="text-[1rem]">Front-end</div>
+        <div className="text-[1rem] flex flex-row gap-3 mb-3">
+          <Image
+            src={frontend.src}
+            alt="frontend"
+            width={50}
+            height={50}
+          ></Image>
+          <span className="relative w-fit font-poppins text-[2rem]">
+            <div className="relative z-10">Frontend Dev</div>
+            <div className="absolute w-full h-2 bg-blue-500 bottom-2 z-0"></div>
+          </span>
+        </div>
+        <div className="font-poppins font-bold text-[1rem]">
+          가장 많이 사용해 봤어요.
+        </div>
         {STACK_FRONT.map((item) => {
           return <StackItem stackItem={item} key={item.name}></StackItem>;
         })}
       </div>
       <div className="flex flex-col gap-3 w-full">
-        <div className="text-[1rem]">Back-end</div>
+        <div className="text-[1rem] flex flex-row gap-3 mb-3">
+          <Image src={backend.src} alt="backend" width={50} height={50}></Image>
+          <span className="relative w-fit font-poppins text-[2rem]">
+            <div className="relative z-10">Backend Dev</div>
+            <div className="absolute w-full h-2 bg-[#EA06D3] bottom-2 z-0"></div>
+          </span>
+        </div>
+        <div className="font-poppins font-bold text-[1rem]">
+          사용해 본 경험이 있어요.
+        </div>
         {STACK_BACK.map((item) => {
           return <StackItem stackItem={item} key={item.name}></StackItem>;
         })}
       </div>
       <div className="flex flex-col gap-3 w-full">
-        <div className="text-[1rem]">DevOps</div>
+        <div className="text-[1rem] flex flex-row gap-3 mb-3">
+          <Image src={devops.src} alt="devops" width={50} height={50}></Image>
+          <span className="relative w-fit font-poppins text-[2rem]">
+            <div className="relative z-10">DevOps & Tools</div>
+            <div className="absolute w-full h-2 bg-[#DA7227] bottom-2 z-0"></div>
+          </span>
+        </div>
+        <div className="font-poppins font-bold text-[1rem]">
+          Github로 프로젝트 관리를 할 수 있어요.
+        </div>
         {STACK_DEV.map((item) => {
           return <StackItem stackItem={item} key={item.name}></StackItem>;
         })}

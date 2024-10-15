@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 type ProjectCardType = {
   title: string;
   summary: string;
@@ -8,6 +10,7 @@ type ProjectCardType = {
   headLine: string;
   list: string[];
   color: string;
+  src: string;
 };
 
 interface CardProps {
@@ -23,22 +26,20 @@ const color: { [key: string]: string } = {
 
 const Card: React.FC<CardProps> = ({ info }) => {
   return (
-    <div className="relative flex flex-col gap-5 w-[410px]">
-      <div className="relative text-[3rem] font-semibold">
-        {info?.title}
-        <div className={color[info.color]}></div>
+    <div className="relative flex flex-col gap-5 w-[500px] h-[310px] rounded-[5px] overflow-hidden">
+      <Image
+        src={info.src}
+        alt={info.title}
+        fill={true}
+        objectFit="cover"
+      ></Image>
+      <div className="h-full w-full bg-gradient-to-t flex flex-col px-8 py-8 from-black/90 to-black/10 z-10 text-[0.9rem] gap-1 justify-end">
+        <span className="text-[2.5rem] font-bold font-poppins">
+          {info.title}
+        </span>
+        <span className="text-[#d5d5d5]">{info?.headLine}</span>
+        <span className="font-poppins">{info?.stack}</span>
       </div>
-      <div className="text-[1rem] flex flex-col">
-        <span>🧾 {info.summary}</span>
-        <span>📅 {info?.dueDate}</span>
-        <span>🛠️ {info?.stack}</span>
-      </div>
-      <h3 className="text-[1.3rem]">{info?.headLine}</h3>
-      <ul className="relative text-[1rem] list-disc list-inside left-[1rem] w-fit">
-        {info?.list.map((item, idx) => {
-          return <li key={idx}>{item}</li>;
-        })}
-      </ul>
     </div>
   );
 };

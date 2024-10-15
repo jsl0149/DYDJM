@@ -35,12 +35,12 @@ const Project = () => {
       ref={ref}
     >
       <div
-        className={`max-w-[1080px] w-[calc(100%-140px)] h-fit   text-white flex flex-col justify-center items-center gap-5 px-[0dvw] ${
+        className={`max-w-[1080px] w-[calc(100%-140px)] h-fit   text-white flex flex-col justify-center items-center gap-5  ${
           isVisible ? 'animate-fade_in_slow opacity-100  ' : 'opacity-0'
         }`}
       >
         <div className="relative w-full flex flex-row top-[10px]">
-          <h3 className="text-[2rem] font-GangwonEduPowerExtraBoldA text-center">
+          <h3 className="text-[2rem] font-poppins font-bold text-center">
             Project
           </h3>
         </div>
@@ -52,7 +52,7 @@ const Project = () => {
             }`}
           ></div>
         </div>
-        <div className="relative flex flex-row flex-wrap justify-between w-full h-fit px-[3rem] top-[150px] gap-[50px] pb-[5rem]">
+        <div className="relative flex flex-row flex-wrap justify-between w-full h-fit  top-[150px] gap-[50px] pb-[5rem]">
           {PROJECT_INFO.map((item) => {
             return <Card info={item} key={item.title}></Card>;
           })}

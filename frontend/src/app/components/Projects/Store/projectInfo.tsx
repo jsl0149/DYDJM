@@ -1,3 +1,6 @@
+import clip from '@/app/images/projects/clipmain.png';
+import carbonlive from '@/app/images/projects/carbonlive.png';
+
 const PROJECT_INFO = [
   {
     title: 'Clip!',
@@ -12,6 +15,7 @@ const PROJECT_INFO = [
       'SEO를 위해 서버 컴포넌트를 이용한 SSR 적용',
     ],
     color: 'purple',
+    src: clip.src,
   },
   {
     title: 'CarbonLive',
@@ -26,6 +30,7 @@ const PROJECT_INFO = [
       'js를 이용한 다양한 api data 가공',
     ],
     color: 'skyblue',
+    src: carbonlive.src,
   },
 ];
 

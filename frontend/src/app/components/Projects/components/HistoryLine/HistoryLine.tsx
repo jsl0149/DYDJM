@@ -41,7 +41,7 @@ const ItemUp = ({
   }, [isVisible]);
 
   return (
-    <div className="relative bottom-2 flex flex-col items-center gap-2">
+    <div className="relative bottom-2 flex flex-col items-center gap-2 font-poppins">
       <span
         className={`text-white text-[1rem] ${
           isVisibleDetail ? 'opacity-100 animate-fade_in_fast' : 'opacity-0'
@@ -85,7 +85,7 @@ const ItemDown = ({
   }, [isVisible]);
 
   return (
-    <div className="relative top-[10px]  flex flex-col items-center gap-2">
+    <div className="relative top-[10px]  flex flex-col items-center gap-2 font-poppins">
       <span className="text-[#808080] text-[1rem] ">{year}</span>
       <div className="relative flex flex-col justify-center items-center">
         <div className={`w-3 h-3 bg-white rounded-full z-10`}></div>

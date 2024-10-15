@@ -28,6 +28,11 @@ const config: Config = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+
+        slide: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(160%)' },
+        },
         bounce_up: {
           '0%': {
             transform: 'translateY(0) scale(1)',
@@ -78,6 +83,7 @@ const config: Config = {
         expand: 'expand 0.5s ease-in-out forwards',
         liner: 'liner 1s forwards',
         rise: 'rise 1s forwards',
+        slide: 'slide 5s linear infinite',
       },
     },
   },

@@ -14,21 +14,26 @@ const Main = () => {
   return (
     <section className='className="relative  w-full h-[100dvh] flex flex-col justify-center items-center'>
       <div className="relative max-w-[1080px] w-[calc(100%-140px)] h-fit text-[3rem]  text-white font-SUIT flex flex-row  items-center font-thin animate-fade_in_fast gap-3">
-        <div className="relative w-1/2 h-[440px] bg-[#4831D4] rounded-[100px] flex flex-col py-14 px-14 justify-between overflow-hidden">
-          <Image
-            src={main.src}
-            alt="main"
-            height={308}
-            width={193}
-            style={{ position: 'absolute', right: '3rem' }}
-          ></Image>
-          <span className="text-[1.5rem]">Frontend Developer</span>
-          <span className="text-[2rem] font-bold">Lee Jin Seon</span>
+        <div className="relative w-1/2 h-[440px] bg-[#4831D4] rounded-[100px] flex flex-col py-[5rem] px-[6rem] justify-center cursor-pointer items-center group hover:scale-95 transition-transform duration-200">
+          <div className="relative flex flex-col w-full h-full justify-between group-hover:hidden">
+            <Image
+              src={main.src}
+              alt="main"
+              height={308}
+              width={193}
+              style={{ position: 'absolute', right: '0rem' }}
+            ></Image>
+            <span className="text-[2.5rem]">Frontend Developer</span>
+            <span className="text-[3.5rem] font-bold">Lee Jin Seon</span>
+          </div>
+          <span className="hidden relative font-bold group-hover:block">
+            About Me
+          </span>
         </div>
         <div className="relative w-1/2 flex flex-col gap-3">
           <div className="relative flex flex-row gap-3">
-            <div className="relative w-1/2 h-[220px] bg-[#F9F9F9] rounded-[70px] px-[50px] py-7 flex flex-col justify-end font-bold">
-              <div className="relative w-full flex flex-row justify-between text-black text-[1.3rem]">
+            <div className="relative w-1/2 h-[220px] bg-[#F9F9F9] rounded-[70px] px-[50px] py-7 flex flex-col justify-end font-bold cursor-pointer items-center hover:scale-95 transition-transform duration-200">
+              <div className="relative w-full flex flex-row justify-between text-black text-[1.8rem]">
                 <span>Skills</span>
                 <Image
                   src={hammmer.src}
@@ -38,8 +43,8 @@ const Main = () => {
                 ></Image>
               </div>
             </div>
-            <div className="relative w-1/2 h-[220px] bg-[#1E1E1E] rounded-[70px] px-[50px] py-7 flex flex-col justify-end font-bold">
-              <div className="relative w-full flex flex-row justify-between text-white text-[1.3rem]">
+            <div className="relative w-1/2 h-[220px] bg-[#1E1E1E] rounded-[70px] px-[50px] py-7 flex flex-col justify-end font-bold cursor-pointer hover:scale-95 transition-transform duration-200">
+              <div className="relative w-full flex flex-row justify-between text-white text-[1.8rem]">
                 <span>Projects</span>
                 <Image
                   src={project.src}
@@ -50,8 +55,8 @@ const Main = () => {
               </div>
             </div>
           </div>
-          <div className="relative w-full h-[220px] bg-[#FFF480] rounded-[70px]  px-[50px] py-7 flex flex-col justify-end font-bold">
-            <div className="relative w-full flex flex-row justify-between text-black text-[1.3rem]">
+          <div className="relative w-full h-[220px] bg-[#FFF480] rounded-[70px]  px-[50px] py-7 flex flex-col justify-end font-bold cursor-pointer hover:scale-95 transition-transform duration-200">
+            <div className="relative w-full flex flex-row justify-between text-black text-[1.8rem]">
               <span>Contact Me</span>
               <Image
                 src={contact.src}

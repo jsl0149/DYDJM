@@ -44,10 +44,14 @@
   }
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   background: var(--background);
   font-family: 'Pretendard';
-  font-size: 62.5%;
+  font-size: 1.6rem;
   align-items: center;
   justify-content: center;
 }
@@ -70,5 +74,19 @@ body {
 }
 
 .animate-slide-up {
-  animation: slide-up 0.5s ease-out forwards;
+  animation: slide-up 3s ease-out infinite;
+}
+
+#ani3 {
+  animation: ani4 2s linear forwards;
+  stroke-dasharray: 1200px;
+  stroke-dashoffset: 0px;
+}
+@keyframes ani4 {
+  0% {
+    stroke-dashoffset: 1200px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }

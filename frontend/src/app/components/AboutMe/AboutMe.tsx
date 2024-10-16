@@ -5,6 +5,7 @@ import { useEffect, useRef } from 'react';
 import photo from '@/app/images/photo.jpg';
 import { TagCloud } from 'react-tagcloud';
 import useStore from './Store/store';
+import Cube from './components/Cube/Cube';
 
 const data = [
   { value: '프론트', count: 38 },
@@ -50,75 +51,44 @@ const AboutMe = () => {
       id="AboutMe"
     >
       <div
-        className={`max-w-[1080px] w-[calc(100%-140px)] h-fit   text-white flex flex-col justify-center items-center gap-5 px-[0dvw] ${
+        className={`max-w-[1080px] w-[calc(100%-140px)] h-fit   text-white flex flex-col justify-center items-center gap-[6rem] px-[0dvw] ${
           isVisible ? 'opacity-100 animate-fade_in_slow ' : 'opacity-0'
         }`}
         ref={ref}
       >
-        <div className="relative w-full flex flex-row top-[10px]">
-          <h3 className="text-[2rem] font-GangwonEduPowerExtraBoldA text-center">
-            About Me
-          </h3>
-        </div>
-        <div className="relative w-full h-fit ">
-          <div
-            className={`absolute bg-white h-[0.5px] w-0left-0 ${
-              isVisible && 'animate-liner'
-            }`}
-          ></div>
-        </div>
-        <div className="relative w-fit h-fit flex flex-row gap-[2rem]">
-          <div className="relative w-fit h-fit flex flex-col text-[1rem] flex-shrink-0 gap-1">
-            <div className="relative w-fit flex flex-row items-end">
-              <span className="text-[2rem] ">
-                이진선 &nbsp;
-                <span className="text-[1.2rem]">Lee Jin Seon</span>
-              </span>
-            </div>
-            <Image
-              src={photo.src}
-              alt="photo"
-              width={230}
-              height={200}
-              quality={100}
-            ></Image>
-            <div>
-              <p>Birth. 1998.08.22</p>
-              <p>Phone. 010-3367-9406</p>
-              <p>Email. coooding.la@gmail.com</p>
-              <p className="w-fit">Education. Inha University CSE</p>
-            </div>
+        <h1 className="text-[7.5rem] font-poppins">About Me</h1>
+        <div className="flex flex-row w-[95%] h-fit gap-[3rem] items-center">
+          <Image
+            src={photo.src}
+            alt="photo"
+            width={244}
+            height={312}
+            style={{ borderRadius: '1.5rem' }}
+          ></Image>
+          <div className="relative flex flex-col w-fit h-full gap-[2rem]">
+            <h2 className="text-[#808080] text-[3rem] font-poppins">
+              이진선, LEE JIN SEON
+            </h2>
+            <p className="text-[2rem] font-poppins">
+              안녕하세요! 신입 프론트엔드 개발자 이진선입니다. 2021년부터 웹
+              개발을 시작한 후, 프로젝트를 진행해 보며 HTML, CSS, JavaScript와
+              같은 핵심 기술을 익혔고, React와 같은 프레임워크도 다뤄보며 실력을
+              키워왔습니다.
+            </p>
+            <p className="text-[2rem] font-poppins">
+              협업을 통해 아이디어를 발전시키고, 팀원들과 소통하며 함께 문제를
+              해결하는 과정을 즐깁니다. 새로운 기술과 트렌드를 빠르게 흡수하고,
+              다른 사람들의 의견을 존중하며 최상의 결과를 위해 노력하는
+              팔로워십을 발휘하고자 합니다. 앞으로도 지속적으로 성장하며 의미
+              있는 프로젝트에 기여하고 싶습니다. 감사합니다!
+            </p>
           </div>
-          <div className="relative w-full ">
-            <TTT></TTT>
-          </div>
+        </div>
+        <div className="absolute w-[1150px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-2/5 ">
+          <Cube></Cube>
         </div>
       </div>
     </section>
-  );
-};
-
-const TTT = () => {
-  const { isVisible } = useStore();
-
-  return (
-    <>
-      <div className="relative w-full animate-fade_in_slow top-[1.5rem]">
-        <TagCloud
-          minSize={35}
-          maxSize={75}
-          tags={data}
-          disableRandomColor={true}
-          randomSeed={13}
-          onClick={(tag) => alert(`'${tag.value}' was selected!`)}
-        />
-      </div>
-      <div
-        className={`absolute bg-white h-[0.5px] w-0 left-0 bottom-[7px] ${
-          isVisible && 'animate-liner'
-        }`}
-      ></div>
-    </>
   );
 };
 

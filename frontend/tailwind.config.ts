@@ -83,7 +83,7 @@ const config: Config = {
         expand: 'expand 0.5s ease-in-out forwards',
         liner: 'liner 1s forwards',
         rise: 'rise 1s forwards',
-        slide: 'slide 5s linear infinite',
+        slide: 'slide 3s linear ease-in-out',
       },
     },
   },

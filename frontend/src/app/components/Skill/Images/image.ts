@@ -1,14 +1,17 @@
-import next from '@/app/images/stacks/next.svg';
-import react from '@/app/images/stacks/react.svg';
-import typescript from '@/app/images/stacks/typescript.svg';
-import javascript from '@/app/images/stacks/javascript.svg';
-import styled_components from '@/app/images/stacks/styled-components.svg';
-import express from '@/app/images/stacks/express.svg';
-import mysql from '@/app/images/stacks/mysql.svg';
-import github from '@/app/images/stacks/github.svg';
-import github_action from '@/app/images/stacks/github-action.svg';
-import docker from '@/app/images/stacks/docker.svg';
-import recoil from '@/app/images/stacks/Recoil.svg';
+import next from '@/app/images/stacks/frontend/next.svg';
+import react from '@/app/images/stacks/frontend/react.svg';
+import typescript from '@/app/images/stacks/frontend/typescript.svg';
+import javascript from '@/app/images/stacks/frontend/javascript.svg';
+import styled_components from '@/app/images/stacks/frontend/styled-components.svg';
+import express from '@/app/images/stacks/backend/express.svg';
+import mysql from '@/app/images/stacks/backend/mysql.svg';
+import github from '@/app/images/stacks/devops/github.svg';
+import github_action from '@/app/images/stacks/devops/github-action.svg';
+import docker from '@/app/images/stacks/devops/docker.svg';
+import recoil from '@/app/images/stacks/frontend/Recoil.svg';
+import figma from '@/app/images/stacks/tool/figma.svg';
+import vscode from '@/app/images/stacks/tool/vscode.svg';
+import notion from '@/app/images/stacks/tool/notion.svg';
 
 const STACK_ICON_OBJ = {
   'Next.js': next.src,
@@ -94,6 +97,26 @@ const STACK_DEV = [
   },
 ];
 
+const STACK_TOOL = [
+  {
+    name: 'Figma',
+    src: figma.src,
+    content:
+      'git push, commit 등의 명령어와 PR을 이용한 프로젝트 관리에 익숙해요.',
+  },
+  {
+    name: 'VSCode',
+    src: vscode.src,
+    content: 'worflow를 작성하여 프로젝트 배포 자동화를 구축한 경험이 있어요. ',
+  },
+  {
+    name: 'notion',
+    src: notion.src,
+    content:
+      'docker image를 이용해 container를 생성할 수 있어요. 백엔드 cotainer 사용에 익숙해요.',
+  },
+];
+
 const STACK_ICON: [string, string][] = Object.entries(STACK_ICON_OBJ);
 
-export { STACK_ICON, STACK_FRONT, STACK_BACK, STACK_DEV };
+export { STACK_ICON, STACK_FRONT, STACK_BACK, STACK_DEV, STACK_TOOL };

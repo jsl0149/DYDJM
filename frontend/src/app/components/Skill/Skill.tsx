@@ -19,16 +19,19 @@ const Skill = () => {
 
   return (
     <section
-      className="relative w-full h-fit bg-[#1b1b1e] flex flex-row justify-center py-[4rem] "
+      className="relative w-full h-[100dvh] bg-[#1b1b1e] flex flex-row justify-center py-[4rem] "
       id="Skills"
     >
       <div
-        className={`max-w-[1100px] w-[calc(100%-140px)] h-fit   text-white flex flex-col justify-center items-center gap-5 px-[0dvw] ${
+        className={`max-w-[1300px] w-[calc(100%-140px)] h-fit   text-white flex flex-col justify-center items-center gap-[5rem] px-[0dvw] ${
           isVisible ? 'opacity-100 animate-fade_in_slow ' : 'opacity-0'
         }`}
       >
-        <div className="relative w-fit flex flex-row top-[10px]">
-          <h1 className="text-[7.5rem] font-poppins">Skills</h1>
+        <div className="relative w-fit flex flex-col items-center">
+          <h1 className="text-[5.5rem] font-poppins h-fit">Skills</h1>
+          <h2 className="relative text-[2rem] text-[#808080] bottom-8">
+            Stack Introduction
+          </h2>
         </div>
         <Detail></Detail>
       </div>
@@ -38,7 +41,7 @@ const Skill = () => {
 
 const Detail = () => {
   return (
-    <div className="relative w-full flex flex-row justify-between">
+    <div className="relative w-full flex flex-row flex-wrap justify-between">
       <div className="flex flex-col gap-[4rem] w-fit">
         <StackList
           title="Frontend Dev"
@@ -85,9 +88,9 @@ interface StackListProps {
 
 const StackList: React.FC<StackListProps> = (props) => {
   const color: { [key: string]: string } = {
-    orange: 'absolute w-full h-2 bg-[#DA7227] bottom-2 z-0',
-    pink: 'absolute w-full h-2 bg-[#EA06D3] bottom-2 z-0',
-    blue: 'absolute w-full h-2 bg-blue-500 bottom-2 z-0',
+    orange: 'absolute w-full h-2 bg-[#DA7227] bottom-3 z-0',
+    pink: 'absolute w-full h-2 bg-[#EA06D3] bottom-3 z-0',
+    blue: 'absolute w-full h-2 bg-blue-500 bottom-3 z-0',
   };
 
   return (
@@ -125,10 +128,10 @@ const StackItem = ({
 }): JSX.Element => {
   return (
     <div className="relative flex flex-row gap-3 items-center w-fit">
-      <Image src={stackItem.src} alt="name" width={50} height={50}></Image>
-      <div className="relative flex flex-col w-fit h-fit gap-[0.5px]">
-        <span className="text-[#808080] text-[1rem]">{stackItem.name}</span>
-        <span className="text-[1rem]">{stackItem.content}</span>
+      <Image src={stackItem.src} alt="name" width={45} height={45}></Image>
+      <div className="relative flex flex-col w-fit h-fit gap-[0.6rem]">
+        <span className="text-[#808080] text-[1.3rem]">{stackItem.name}</span>
+        <span className="text-[1.4rem]">{stackItem.content}</span>
       </div>
     </div>
   );

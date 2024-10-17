@@ -19,11 +19,11 @@ const Skill = () => {
 
   return (
     <section
-      className="relative w-full h-[100dvh] bg-[#1b1b1e] flex flex-row justify-center py-[4rem] "
+      className="relative w-full h-fit bg-[#1b1b1e] flex flex-row justify-center py-[30rem] "
       id="Skills"
     >
       <div
-        className={`max-w-[1300px] w-[calc(100%-140px)] h-fit   text-white flex flex-col justify-center items-center gap-[5rem] px-[0dvw] ${
+        className={`max-w-[1400px] w-[calc(100%-140px)] h-fit   text-white flex flex-col justify-center items-center gap-[5rem] px-[0dvw] ${
           isVisible ? 'opacity-100 animate-fade_in_slow ' : 'opacity-0'
         }`}
       >
@@ -94,7 +94,7 @@ const StackList: React.FC<StackListProps> = (props) => {
   };
 
   return (
-    <div className="flex flex-col gap-3 w-full">
+    <div className="flex flex-col gap-5 w-full">
       <div className="text-[1rem] flex flex-row gap-3 mb-3 items-center">
         <Image
           src={props.icon}
@@ -103,14 +103,23 @@ const StackList: React.FC<StackListProps> = (props) => {
           height={50}
         ></Image>
         <span className="relative w-fit font-poppins text-[2.5rem] h-fit">
-          <div className="relative z-10">{props.title}</div>
-          <div className={color[props.color]}></div>
+          <p className="relative z-10">{props.title}</p>
+          <p className={color[props.color]}></p>
         </span>
       </div>
-      <div className="font-poppins font-bold text-[1rem]">{props.detail}</div>
-      {props.stackItemArray.map((item) => {
-        return <StackItem stackItem={item} key={item.name}></StackItem>;
-      })}
+      <div className="flex flex-row gap-3 h-fit items-center">
+        <div className="relative flex flex-col h-[calc(100%+30px)] text-gray-500 items-center font-bold gap-1">
+          <p>{'<p>'}</p>
+          <div className="relative border-l border-gray-400 h-full w-[2px]"></div>
+          <p>{'</p>'}</p>
+        </div>
+        <div className="flex flex-col gap-3">
+          <p className="font-poppins font-bold text-[1rem]">{props.detail}</p>
+          {props.stackItemArray.map((item) => {
+            return <StackItem stackItem={item} key={item.name}></StackItem>;
+          })}
+        </div>
+      </div>
     </div>
   );
 };
@@ -130,8 +139,8 @@ const StackItem = ({
     <div className="relative flex flex-row gap-3 items-center w-fit">
       <Image src={stackItem.src} alt="name" width={45} height={45}></Image>
       <div className="relative flex flex-col w-fit h-fit gap-[0.6rem]">
-        <span className="text-[#808080] text-[1.3rem]">{stackItem.name}</span>
-        <span className="text-[1.4rem]">{stackItem.content}</span>
+        <p className="text-[#808080] text-[1.3rem]">{stackItem.name}</p>
+        <p className="text-[1.4rem]">{stackItem.content}</p>
       </div>
     </div>
   );

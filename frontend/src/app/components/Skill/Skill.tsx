@@ -23,7 +23,7 @@ const Skill = () => {
       id="Skills"
     >
       <div
-        className={`max-w-[1080px] w-[calc(100%-140px)] h-fit   text-white flex flex-col justify-center items-center gap-5 px-[0dvw] ${
+        className={`max-w-[1100px] w-[calc(100%-140px)] h-fit   text-white flex flex-col justify-center items-center gap-5 px-[0dvw] ${
           isVisible ? 'opacity-100 animate-fade_in_slow ' : 'opacity-0'
         }`}
       >
@@ -39,7 +39,7 @@ const Skill = () => {
 const Detail = () => {
   return (
     <div className="relative w-full flex flex-row justify-between">
-      <div className="flex flex-col gap-[4rem] w-full">
+      <div className="flex flex-col gap-[4rem] w-fit">
         <StackList
           title="Frontend Dev"
           detail="자주 다뤄봤어요."
@@ -55,7 +55,7 @@ const Detail = () => {
           icon={backend.src}
         ></StackList>
       </div>
-      <div className="flex flex-col gap-[4rem] w-full">
+      <div className="flex flex-col gap-[4rem] w-fit">
         <StackList
           title="DevOps"
           detail="Github로 프로젝트 관리를 할 수 있어요."
@@ -92,9 +92,14 @@ const StackList: React.FC<StackListProps> = (props) => {
 
   return (
     <div className="flex flex-col gap-3 w-full">
-      <div className="text-[1rem] flex flex-row gap-3 mb-3">
-        <Image src={props.icon} alt="devops" width={50} height={50}></Image>
-        <span className="relative w-fit font-poppins text-[2rem]">
+      <div className="text-[1rem] flex flex-row gap-3 mb-3 items-center">
+        <Image
+          src={props.icon}
+          alt={props.title}
+          width={50}
+          height={50}
+        ></Image>
+        <span className="relative w-fit font-poppins text-[2.5rem] h-fit">
           <div className="relative z-10">{props.title}</div>
           <div className={color[props.color]}></div>
         </span>

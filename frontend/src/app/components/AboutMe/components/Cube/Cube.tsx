@@ -1,6 +1,6 @@
 const Cube = () => {
   return (
-    <svg className="relative w-full h-[400px] bottom-[7rem] left-[2rem]  ">
+    <svg className="relative w-full h-[400px]  ">
       <ellipse
         cx="166"
         cy="350"

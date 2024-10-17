@@ -56,26 +56,26 @@ const AboutMe = () => {
         }`}
         ref={ref}
       >
-        <h1 className="text-[7.5rem] font-poppins">About Me</h1>
+        <h1 className="text-[5.5rem] font-poppins">About Me</h1>
         <div className="flex flex-row w-[95%] h-fit gap-[3rem] items-center">
           <Image
             src={photo.src}
             alt="photo"
-            width={244}
-            height={312}
+            width={200}
+            height={270}
             style={{ borderRadius: '1.5rem' }}
           ></Image>
           <div className="relative flex flex-col w-fit h-full gap-[2rem]">
-            <h2 className="text-[#808080] text-[3rem] font-poppins">
+            <h2 className="text-[#808080] text-[2.5rem] font-poppins">
               이진선, LEE JIN SEON
             </h2>
-            <p className="text-[2rem] font-poppins">
+            <p className="text-[1.8rem] font-poppins">
               안녕하세요! 신입 프론트엔드 개발자 이진선입니다. 2021년부터 웹
               개발을 시작한 후, 프로젝트를 진행해 보며 HTML, CSS, JavaScript와
               같은 핵심 기술을 익혔고, React와 같은 프레임워크도 다뤄보며 실력을
               키워왔습니다.
             </p>
-            <p className="text-[2rem] font-poppins">
+            <p className="text-[1.8rem] font-poppins">
               협업을 통해 아이디어를 발전시키고, 팀원들과 소통하며 함께 문제를
               해결하는 과정을 즐깁니다. 새로운 기술과 트렌드를 빠르게 흡수하고,
               다른 사람들의 의견을 존중하며 최상의 결과를 위해 노력하는
@@ -84,7 +84,7 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
-        <div className="absolute w-[1150px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-2/5 ">
+        <div className="absolute w-[1150px] left-1/2 -translate-x-1/2 bottom-[18rem] ">
           <Cube></Cube>
         </div>
       </div>

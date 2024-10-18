@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 const HistoryLine = () => {
   return (
-    <div className="absolute flex flex-row top-[-48px] left-[300px] gap-8">
+    <div className="relative flex flex-row gap-10">
       <ItemUp year={'2020'} content={'지뢰찾기'} time={1000}></ItemUp>
       <ItemDown
         year={'2021'}
@@ -41,14 +41,14 @@ const ItemUp = ({
   }, [isVisible]);
 
   return (
-    <div className="relative bottom-2 flex flex-col items-center gap-2 font-poppins">
-      <span
-        className={`text-white text-[1rem] ${
+    <div className="relative top-[0px] flex flex-col items-center gap-2 font-poppins">
+      <p
+        className={`text-white text-[1.5rem] ${
           isVisibleDetail ? 'opacity-100 animate-fade_in_fast' : 'opacity-0'
         }`}
       >
         {content}
-      </span>
+      </p>
       <div className="relative flex flex-col justify-center items-center">
         <div className="relaive w-[0.5px] h-5">
           <div
@@ -60,7 +60,7 @@ const ItemUp = ({
 
         <div className=" w-3 h-3 bg-white rounded-full "></div>
       </div>
-      <span className="text-[#808080] text-[1rem]">{year}</span>
+      <p className="text-[#808080] text-[1.5rem]">{year}</p>
     </div>
   );
 };
@@ -85,8 +85,8 @@ const ItemDown = ({
   }, [isVisible]);
 
   return (
-    <div className="relative top-[10px]  flex flex-col items-center gap-2 font-poppins">
-      <span className="text-[#808080] text-[1rem] ">{year}</span>
+    <div className="relative top-[13px]  flex flex-col items-center gap-2 font-poppins">
+      <p className="text-[#808080] text-[1.5rem] ">{year}</p>
       <div className="relative flex flex-col justify-center items-center">
         <div className={`w-3 h-3 bg-white rounded-full z-10`}></div>
         <div className="relaive w-[0.5px] h-10">
@@ -97,13 +97,13 @@ const ItemDown = ({
           ></div>
         </div>
       </div>
-      <span
-        className={`text-white text-[1rem] ${
+      <p
+        className={`text-white text-[1.5rem] ${
           isVisibleDetail ? 'opacity-100 animate-fade_in_fast' : 'opacity-0'
         }`}
       >
         {content}
-      </span>
+      </p>
     </div>
   );
 };

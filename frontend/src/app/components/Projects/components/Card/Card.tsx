@@ -17,12 +17,12 @@ interface CardProps {
   info: ProjectCardType;
 }
 
-const color: { [key: string]: string } = {
-  purple:
-    'absolute w-0 top-5 h-0  right-0 border-t-[30px] border-t-[#790DE4] border-r-0 border-r-transparent border-l-[30px] border-l-transparent',
-  skyblue:
-    'absolute w-0 top-5 h-0  right-0 border-t-[30px] border-t-[#99BFCF] border-r-0 border-r-transparent border-l-[30px] border-l-transparent',
-};
+// const color: { [key: string]: string } = {
+//   purple:
+//     'absolute w-0 top-5 h-0  right-0 border-t-[30px] border-t-[#790DE4] border-r-0 border-r-transparent border-l-[30px] border-l-transparent',
+//   skyblue:
+//     'absolute w-0 top-5 h-0  right-0 border-t-[30px] border-t-[#99BFCF] border-r-0 border-r-transparent border-l-[30px] border-l-transparent',
+// };
 
 const Card: React.FC<CardProps> = ({ info }) => {
   return (

@@ -2,14 +2,7 @@
 
 import useStore from '../AboutMe/Store/store';
 import Image from 'next/image';
-import {
-  STACK_ICON,
-  STACK_BACK,
-  STACK_DEV,
-  STACK_FRONT,
-  STACK_TOOL,
-} from './Images/image';
-import frontend from '../../images/front.svg';
+import { STACK_BACK, STACK_DEV, STACK_FRONT, STACK_TOOL } from './Images/image';
 import backend from '../../images/backend.svg';
 import devops from '../../images/devops.svg';
 import tool from '../../images/tool.svg';

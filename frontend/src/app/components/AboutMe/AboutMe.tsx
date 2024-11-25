@@ -3,26 +3,8 @@
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import photo from '@/app/images/photo.jpg';
-import { TagCloud } from 'react-tagcloud';
 import useStore from './Store/store';
 import Cube from './components/Cube/Cube';
-
-const data = [
-  { value: '프론트', count: 38 },
-  { value: '배려', count: 30 },
-  { value: 'INFP', count: 15 },
-  { value: '감성적', count: 13 },
-  { value: '이타적', count: 18 },
-  { value: '통기타', count: 15 },
-  { value: '책임감', count: 35 },
-  { value: '눈치빠름', count: 25 },
-  { value: '소통', count: 30 },
-  { value: '열정', count: 38 },
-  { value: '공감', count: 15 },
-  { value: '흡수력', count: 20 },
-  { value: '팔로워십', count: 20 },
-  { value: '긍정적', count: 38 },
-];
 
 const AboutMe = () => {
   const { isVisible, setVisible } = useStore();

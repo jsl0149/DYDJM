@@ -42,7 +42,7 @@ const Skill = () => {
 const Detail = () => {
   return (
     <div className="relative w-full flex flex-row flex-wrap justify-between">
-      <div className="flex flex-col gap-[4rem] w-fit">
+      <div className="flex flex-col gap-[5rem] w-fit">
         <StackList
           title="Frontend Dev"
           detail="자주 다뤄봤어요."
@@ -58,7 +58,7 @@ const Detail = () => {
           icon={backend.src}
         ></StackList>
       </div>
-      <div className="flex flex-col gap-[4rem] w-fit">
+      <div className="flex flex-col gap-[5rem] w-fit">
         <StackList
           title="DevOps"
           detail="Github로 프로젝트 관리를 할 수 있어요."
@@ -70,7 +70,7 @@ const Detail = () => {
           title="Tools"
           detail="현재 사용하고 있는 Tool 이에요."
           stackItemArray={STACK_TOOL}
-          color="orange"
+          color="green"
           icon={tool.src}
         ></StackList>
       </div>
@@ -91,6 +91,7 @@ const StackList: React.FC<StackListProps> = (props) => {
     orange: 'absolute w-full h-2 bg-[#DA7227] bottom-3 z-0',
     pink: 'absolute w-full h-2 bg-[#EA06D3] bottom-3 z-0',
     blue: 'absolute w-full h-2 bg-blue-500 bottom-3 z-0',
+    green: 'absolute w-full h-2 bg-[#16FF00] bottom-3 z-0',
   };
 
   return (
@@ -108,13 +109,13 @@ const StackList: React.FC<StackListProps> = (props) => {
         </span>
       </div>
       <div className="flex flex-row gap-3 h-fit items-center">
-        <div className="relative flex flex-col h-[calc(100%+30px)] text-gray-500 items-center font-bold gap-1">
+        <div className="relative flex flex-col h-[calc(100%+40px)] text-gray-500 items-center font-bold gap-1">
           <p>{'<p>'}</p>
           <div className="relative border-l border-gray-400 h-full w-[2px]"></div>
           <p>{'</p>'}</p>
         </div>
         <div className="flex flex-col gap-3">
-          <p className="font-poppins font-bold text-[1rem]">{props.detail}</p>
+          <p className="font-poppins font-bold text-[1.3rem]">{props.detail}</p>
           {props.stackItemArray.map((item) => {
             return <StackItem stackItem={item} key={item.name}></StackItem>;
           })}

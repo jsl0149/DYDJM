@@ -31,9 +31,9 @@ const Card: React.FC<CardProps> = ({ info }) => {
         src={info.src}
         alt={info.title}
         fill={true}
-        objectFit="cover"
+        style={{ objectFit: 'cover' }}
       ></Image>
-      <div className="h-full w-full bg-gradient-to-t flex flex-col px-8 py-8 from-black/90 to-black/10 z-10 text-[0.9rem] gap-1 justify-end">
+      <div className="h-full w-full bg-gradient-to-t flex flex-col px-8 py-8 from-black/90 to-black/10 z-10 text-[1.2rem] gap-1 justify-end">
         <p className="text-[2.5rem] font-bold font-poppins">{info.title}</p>
         <p className="text-[#d5d5d5]">{info?.headLine}</p>
         <p className="font-poppins">{info?.stack}</p>

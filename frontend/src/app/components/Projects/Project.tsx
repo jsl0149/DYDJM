@@ -53,7 +53,7 @@ const Project = () => {
             }`}
           ></div>
         </div>
-        <div className="relative flex flex-row flex-wrap justify-between w-full h-fit top-[150px] gap-[50px] pb-[5rem]">
+        <div className="relative flex flex-row flex-wrap justify-between w-full h-fit  gap-[50px] pb-[5rem]">
           {PROJECT_INFO.map((item) => {
             return <Card info={item} key={item.title}></Card>;
           })}

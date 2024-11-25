@@ -93,7 +93,7 @@ const STACK_DEV = [
     name: 'Docker',
     src: docker.src,
     content:
-      'docker image를 이용해 container를 생성할 수 있어요. 백엔드 cotainer 사용에 익숙해요.',
+      'docker image, container를 생성할 수 있어요. 백엔드와의 협업에 주로 사용했어요.',
   },
 ];
 
@@ -102,18 +102,18 @@ const STACK_TOOL = [
     name: 'Figma',
     src: figma.src,
     content:
-      'git push, commit 등의 명령어와 PR을 이용한 프로젝트 관리에 익숙해요.',
+      'Figma를 이용한 디자이너와 협업 경험, 디자인에 이용해 본 경험이 있어요.',
   },
   {
     name: 'VSCode',
     src: vscode.src,
-    content: 'worflow를 작성하여 프로젝트 배포 자동화를 구축한 경험이 있어요. ',
+    content: '가장 오래 사용한 IDE에요.',
   },
   {
     name: 'notion',
     src: notion.src,
     content:
-      'docker image를 이용해 container를 생성할 수 있어요. 백엔드 cotainer 사용에 익숙해요.',
+      'Notion 칸반 보드 등 협업 템플릿을 만들어 본 경험이 었어요. 주로 기록에 사용해요.',
   },
 ];
 

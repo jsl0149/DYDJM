@@ -2,10 +2,10 @@ const Cube = () => {
   return (
     <svg className="relative w-full h-[400px]  ">
       <ellipse
-        cx="166"
-        cy="350"
+        cx="163"
+        cy="360"
         rx="80"
-        ry="20"
+        ry="10"
         className="stroke-current text-white"
         strokeWidth="2"
         fill="none"
@@ -32,7 +32,7 @@ const Cube = () => {
         x1="1100"
         y1="400"
         x2="1100"
-        y2="50"
+        y2="100"
         className="stroke-current text-white"
         stroke-width="2"
       />
@@ -48,15 +48,15 @@ const Cube = () => {
         x1="1130"
         y1="350"
         x2="1130"
-        y2="0"
+        y2="30"
         className="stroke-current text-white"
         stroke-width="2"
       />
       <line
         x1="1100"
-        y1="50"
+        y1="80"
         x2="1130"
-        y2="0"
+        y2="30"
         className="stroke-current text-white"
         stroke-width="2"
       />

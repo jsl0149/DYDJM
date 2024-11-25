@@ -56,7 +56,12 @@ const AboutMe = () => {
         }`}
         ref={ref}
       >
-        <h1 className="text-[5.5rem] font-poppins">About Me</h1>
+        <div className="relative w-fit flex flex-col items-center">
+          <h1 className="text-[5.5rem] font-poppins h-fit">About Me</h1>
+          <h2 className="relative text-[2rem] text-[#808080] bottom-8">
+            My Introduction
+          </h2>
+        </div>
         <div className="flex flex-row w-[95%] h-fit gap-[3rem] items-center">
           <Image
             src={photo.src}
@@ -65,9 +70,9 @@ const AboutMe = () => {
             height={270}
             style={{ borderRadius: '1.5rem' }}
           ></Image>
-          <div className="relative flex flex-col w-fit h-full gap-[2rem]">
+          <div className="relative flex flex-col w-fit h-full gap-[2rem] ">
             <h2 className="text-[#808080] text-[2.5rem] font-poppins">
-              이진선, LEE JIN SEON
+              이진선 LEE JIN SEON
             </h2>
             <p className="text-[1.8rem] font-poppins">
               안녕하세요! 신입 프론트엔드 개발자 이진선입니다. 2021년부터 웹
@@ -83,9 +88,9 @@ const AboutMe = () => {
               있는 프로젝트에 기여하고 싶습니다. 감사합니다!
             </p>
           </div>
-        </div>
-        <div className="absolute w-[1150px] left-1/2 -translate-x-1/2 bottom-[18rem] ">
-          <Cube></Cube>
+          <div className="absolute w-[1150px] left-1/2 -translate-x-1/2 ] ">
+            <Cube></Cube>
+          </div>
         </div>
       </div>
     </section>
